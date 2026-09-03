@@ -61,7 +61,6 @@
 
 // export default App;
 
-
 // src/App.jsx
 import React from "react";
 import { Routes, Route } from "react-router-dom";
@@ -71,6 +70,7 @@ import Home from "./pages/Home";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import CopyrightPolicy from "./pages/CopyrightPolicy";
 import NotFound from "./pages/NotFound";
+import Notices from "./pages/Notices";
 
 const App = () => {
   return (
@@ -78,6 +78,7 @@ const App = () => {
       <Routes>
         {/* Client Home */}
         <Route path="/" element={<Home />} />
+        <Route path="/notices" element={<Notices />} />
 
         {/* Other client routes will be added later */}
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />

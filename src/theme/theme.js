@@ -9,7 +9,7 @@ const theme = createTheme({
     // Client Main Background
     // =========================================
     background: {
-      default: "#F6F8FC",
+      default: "#fcfcf6",
     },
 
     // =========================================
