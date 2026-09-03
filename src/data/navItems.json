@@ -1,0 +1,64 @@
+[
+  {
+    "label": "home",
+    "href": "/"
+  },
+  {
+    "label": "introduction",
+    "href": "/intro"
+  },
+  {
+    "label": "elibry",
+    "href": "/libery",
+    "submenu": [
+      {
+        "label": "books",
+        "href": "/libery/books"
+      },
+      {
+        "label": "audioBooks",
+        "href": "/libery/audio-books"
+      },
+      {
+        "label": "textBooks",
+        "href": "/libery/text-books"
+      },
+      {
+        "label": "bookReviews",
+        "href": "/libery/book-reviews"
+      }
+    ]
+  },
+  {
+    "label": "media",
+    "href": "/media"
+  },
+  {
+    "label": "news",
+    "href": "/newus"
+  },
+  {
+    "label": "thought",
+    "href": "/thought"
+  },
+  {
+    "label": "allIssue",
+    "href": "/allissue"
+  },
+  {
+    "label": "specialIssue",
+    "href": "/Specialissu"
+  },
+  {
+    "label": "archive",
+    "href": "/archive"
+  },
+  {
+    "label": "rulesbook",
+    "href": "/rulesbook"
+  },
+  {
+    "label": "contactUs",
+    "href": "/contact-us"
+  }
+]
