@@ -1,68 +1,8 @@
-// import React from "react";
-// import { Box, Container, Grid, Typography } from "@mui/material";
-
-// import BookCard from "../components/Library/BookCard";
-
-// const reviews = [
-//   {
-//     id: 1,
-//     title: "हिंदी साहित्य का नया परिदृश्य",
-//     imageSrc: "/default-placeholder.png",
-//     pdfLink: "#",
-//   },
-//   {
-//     id: 2,
-//     title: "समकालीन कविता की संवेदना",
-//     imageSrc: "/default-placeholder.png",
-//     pdfLink: "#",
-//   },
-// ];
-
-// const BookReviews = () => {
-//   return (
-//     <Box sx={{ py: { xs: 3, md: 5 } }}>
-//       <Container maxWidth="xl">
-//         <Box sx={{ mb: 4 }}>
-//           <Typography
-//             variant="h4"
-//             sx={{
-//               color: "#3B060A",
-//               fontWeight: 800,
-//             }}
-//           >
-//             पुस्तक समीक्षाएं
-//           </Typography>
-
-//           <Typography sx={{ mt: 0.75, color: "#6B4F45" }}>
-//             पुस्तकों से संबंधित समीक्षाएं और साहित्यिक सामग्री
-//           </Typography>
-//         </Box>
-
-//         <Grid container spacing={3}>
-//           {reviews.map((book) => (
-//             <Grid item xs={12} sm={6} md={4} lg={3} key={book.id}>
-//               <BookCard
-//                 title={book.title}
-//                 imageSrc={book.imageSrc}
-//                 pdfLink={book.pdfLink}
-//                 buttonText="समीक्षा पढ़ें"
-//               />
-//             </Grid>
-//           ))}
-//         </Grid>
-//       </Container>
-//     </Box>
-//   );
-// };
-
-// export default BookReviews;
-
 import React from "react";
 import { Box, Container, Grid, Typography } from "@mui/material";
 import AutoStoriesRoundedIcon from "@mui/icons-material/AutoStoriesRounded";
 
 import { AppCard, AppButton } from "../components/common/index";
-
 
 const reviews = [
   {

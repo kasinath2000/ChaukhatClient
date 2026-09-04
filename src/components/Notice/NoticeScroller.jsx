@@ -148,7 +148,7 @@ import {
   NotificationsNoneRounded,
 } from "@mui/icons-material";
 
-import AppButton from "../Common/AppButton";
+import { AppButton } from "../common/index";
 
 const NoticeScroller = ({ notices = [] }) => {
   return (

@@ -1,35 +1,3 @@
-// import React from "react";
-// import { Box, Container, Typography } from "@mui/material";
-
-// const Libery = () => {
-//   return (
-//     <Box sx={{ py: { xs: 4, md: 6 } }}>
-//       <Container maxWidth="xl">
-//         <Typography
-//           variant="h3"
-//           sx={{
-//             color: "#3B060A",
-//             fontWeight: 800,
-//           }}
-//         >
-//           पुस्तकालय
-//         </Typography>
-
-//         <Typography
-//           sx={{
-//             mt: 1,
-//             color: "#6B4F45",
-//           }}
-//         >
-//           चौखट डिजिटल पुस्तकालय में आपका स्वागत है।
-//         </Typography>
-//       </Container>
-//     </Box>
-//   );
-// };
-
-// export default Libery;
-
 import React from "react";
 import { Box, Container, Grid, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
@@ -40,7 +8,7 @@ import HeadphonesRoundedIcon from "@mui/icons-material/HeadphonesRounded";
 import ReviewsRoundedIcon from "@mui/icons-material/ReviewsRounded";
 import ArrowForwardRoundedIcon from "@mui/icons-material/ArrowForwardRounded";
 
-import { AppCard, AppButton } from "../components/common/index";
+import { AppCard } from "../components/common/index";
 
 const libraryItems = [
   {
