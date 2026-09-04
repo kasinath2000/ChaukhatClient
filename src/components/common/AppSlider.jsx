@@ -218,6 +218,7 @@ const AppSlider = ({
   items = [],
   renderSlide,
   getSlideLink,
+  openInNewTab = false,
 
   autoPlay = true,
   interval = 5000,
@@ -311,6 +312,8 @@ const AppSlider = ({
         <Box
           component={Link}
           to={slideLink}
+          target={openInNewTab ? "_blank" : undefined}
+          rel={openInNewTab ? "noopener noreferrer" : undefined}
           sx={{
             display: "block",
             width: "100%",

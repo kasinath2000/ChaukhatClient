@@ -24,10 +24,18 @@ import Workshop from "./pages/media/Workshop";
 import Discussions from "./pages/media/Discussions";
 import ArtCorner from "./pages/media/ArtCorner";
 
+import ChaukhatPar from "./pages/news/ChaukhatPar";
+import KhabarSahityaKi from "./pages/news/KhabarSahityaKi";
+
+import Patwar from "./pages/thought/Patwar";
+import Lantern from "./pages/thought/Lantern";
+import Idioms from "./pages/thought/Idioms";
+
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import CopyrightPolicy from "./pages/CopyrightPolicy";
 
 import NotFound from "./pages/NotFound";
+import AllIssue from "./pages/AllIssue";
 
 const App = () => {
   return (
@@ -57,6 +65,19 @@ const App = () => {
         <Route path="/media/discussions" element={<Discussions />} />
         <Route path="/media/workshop" element={<Workshop />} />
         <Route path="/media/art-corner" element={<ArtCorner />} />
+
+        {/* news */}
+        <Route path="/newus" element={<ChaukhatPar />} />
+        <Route path="/newus/chaukhat-par" element={<ChaukhatPar />} />
+        <Route path="/newus/khabar-sahitya-ki" element={<KhabarSahityaKi />} />
+
+        {/* thought */}
+        <Route path="/thought" element={<Patwar />} />
+        <Route path="/thought/patwar" element={<Patwar />} />
+
+        <Route path="/thought/lantern" element={<Lantern />} />
+        <Route path="/thought/idioms" element={<Idioms />} />
+        <Route path="/allissue" element={<AllIssue />} />
 
         {/* Policies */}
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
