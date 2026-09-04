@@ -1,86 +1,64 @@
-// import { Routes, Route } from "react-router-dom";
-
-// import Navbar from "./components/Nav/NavBar";
-
-// // Pages
-// import Home from "./pages/Home";
-// // import Introduction from "./pages/Introduction/Introduction";
-
-// // import Books from "./pages/Library/Books";
-// // import AudioBooks from "./pages/Library/AudioBooks";
-// // import TextBooks from "./pages/Library/TextBooks";
-// // import BookReviews from "./pages/Library/BookReviews";
-
-// // import Media from "./pages/Media/Media";
-// // import News from "./pages/News/News";
-// // import Thought from "./pages/Thought/Thought";
-
-// // import AllIssue from "./pages/Issue/AllIssue";
-// // import SpecialIssue from "./pages/Issue/SpecialIssue";
-
-// // import Archive from "./pages/Archive/Archive";
-// // import RulesBook from "./pages/RulesBook/RulesBook";
-// // import ContactUs from "./pages/ContactUs/ContactUs";
-
-// const App = () => {
-//   return (
-//     <>
-//       {/* Client Background */}
-//       <Navbar />
-
-//       <Routes>
-//         {/* Home */}
-//         <Route path="/" element={<Home />} />
-
-//         {/* Introduction */}
-//         {/* <Route path="/intro" element={<Introduction />} /> */}
-
-//         {/* E-Library */}
-//         {/* <Route path="/libery/books" element={<Books />} />
-//         <Route path="/libery/audio-books" element={<AudioBooks />} />
-//         <Route path="/libery/text-books" element={<TextBooks />} />
-//         <Route path="/libery/book-reviews" element={<BookReviews />} /> */}
-
-//         {/* Main Navigation */}
-//         {/* <Route path="/media" element={<Media />} />
-//         <Route path="/newus" element={<News />} />
-//         <Route path="/thought" element={<Thought />} /> */}
-
-//         {/* Issues */}
-//         {/* <Route path="/allissue" element={<AllIssue />} />
-//         <Route path="/Specialissu" element={<SpecialIssue />} /> */}
-
-//         {/* Other */}
-//         {/* <Route path="/archive" element={<Archive />} />
-//         <Route path="/rulesbook" element={<RulesBook />} />
-//         <Route path="/contact-us" element={<ContactUs />} /> */}
-//       </Routes>
-//     </>
-//   );
-// };
-
-// export default App;
-
 // src/App.jsx
+
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
 import LayoutWrapper from "./components/Layout/LayoutWrapper";
+
 import Home from "./pages/Home";
+import Notices from "./pages/Notices";
+import Intro from "./pages/Intro";
+import Contact from "./pages/Contact";
+
+import Libery from "./pages/Libery";
+import Books from "./pages/Books";
+import TextBooks from "./pages/TextBooks";
+import AudioBooks from "./pages/AudioBooks";
+import BookReviews from "./pages/BookReviews";
+
+import Interview from "./pages/media/Interview";
+import CulturalEvents from "./pages/media/CulturalEvents";
+import Theatre from "./pages/media/Theatre";
+import Cinema from "./pages/media/Cinema";
+import Workshop from "./pages/media/Workshop";
+import Discussions from "./pages/media/Discussions";
+import ArtCorner from "./pages/media/ArtCorner";
+
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import CopyrightPolicy from "./pages/CopyrightPolicy";
+
 import NotFound from "./pages/NotFound";
-import Notices from "./pages/Notices";
 
 const App = () => {
   return (
     <LayoutWrapper>
       <Routes>
-        {/* Client Home */}
+        {/* Home */}
         <Route path="/" element={<Home />} />
-        <Route path="/notices" element={<Notices />} />
 
-        {/* Other client routes will be added later */}
+        {/* General */}
+        <Route path="/notices" element={<Notices />} />
+        <Route path="/intro" element={<Intro />} />
+        <Route path="/contact-us" element={<Contact />} />
+
+        {/* Library */}
+        <Route path="/libery" element={<Libery />} />
+        <Route path="/libery/books" element={<Books />} />
+        <Route path="/libery/text-books" element={<TextBooks />} />
+        <Route path="/libery/audio-books" element={<AudioBooks />} />
+        <Route path="/libery/book-reviews" element={<BookReviews />} />
+
+        {/* Media */}
+        <Route path="/media" element={<Interview />} />
+        <Route path="/media/interview" element={<Interview />} />
+        <Route path="/media/cultural-events" element={<CulturalEvents />} />
+        <Route path="/media/theatre" element={<Theatre />} />
+        <Route path="/media/cinema" element={<Cinema />} />
+        <Route path="/media/discussions" element={<Discussions />} />
+        <Route path="/media/workshop" element={<Workshop />} />
+        <Route path="/media/art-corner" element={<ArtCorner />} />
+
+        {/* Policies */}
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/copyright-policy" element={<CopyrightPolicy />} />
 
