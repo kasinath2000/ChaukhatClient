@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 
 import {
   Box,
@@ -503,6 +504,8 @@ const Contact = () => {
           </Box>
 
           <Button
+          component={Link}
+      to="/founder"
             variant="text"
             endIcon={<ArrowForwardRounded />}
             sx={{

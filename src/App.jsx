@@ -6,6 +6,16 @@ import { Routes, Route } from "react-router-dom";
 import LayoutWrapper from "./components/Layout/LayoutWrapper";
 
 import Home from "./pages/Home";
+
+// Chaukhat Family
+import Founder from "./pages/Founder";
+import Patron from "./pages/Patron";
+import AdvisoryBoard from "./pages/AdvisoryBoard";
+import EditorialBoard from "./pages/EditorialBoard";
+import ExpertCommittee from "./pages/ExpertCommittee";
+import ActiveMembers from "./pages/ActiveMembers";
+import TechnicalTeam from "./pages/TechnicalTeam";
+
 import Notices from "./pages/Notices";
 import Intro from "./pages/Intro";
 import Contact from "./pages/Contact";
@@ -31,11 +41,22 @@ import Patwar from "./pages/thought/Patwar";
 import Lantern from "./pages/thought/Lantern";
 import Idioms from "./pages/thought/Idioms";
 
+import AllIssue from "./pages/AllIssue";
+import SpecialIssue from "./pages/SpecialIssue";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import CopyrightPolicy from "./pages/CopyrightPolicy";
 
 import NotFound from "./pages/NotFound";
-import AllIssue from "./pages/AllIssue";
+
+import AuthorsHome from "./pages/Archive/AuthorsHome";
+import AuthorsMemories from "./pages/Archive/AuthorsMemories";
+import Past from "./pages/Archive/Past";
+import MuseumMemories from "./pages/Archive/MuseumMemories";
+
+import Membership from "./pages/RulesBook/Membership";
+import Publication from "./pages/RulesBook/Publication";
+import Confirmation from "./pages/RulesBook/Confirmation";
+import RulesBookPreview from "./pages/RulesBook/RulesBookPreview";
 
 const App = () => {
   return (
@@ -43,6 +64,13 @@ const App = () => {
       <Routes>
         {/* Home */}
         <Route path="/" element={<Home />} />
+        <Route path="/founder" element={<Founder />} />
+        <Route path="/patron" element={<Patron />} />
+        <Route path="/advisory-board" element={<AdvisoryBoard />} />
+        <Route path="/editorial-board" element={<EditorialBoard />} />
+        <Route path="/expert-committee" element={<ExpertCommittee />} />
+        <Route path="/active-members" element={<ActiveMembers />} />
+        <Route path="/technical-team" element={<TechnicalTeam />} />
 
         {/* General */}
         <Route path="/notices" element={<Notices />} />
@@ -74,10 +102,23 @@ const App = () => {
         {/* thought */}
         <Route path="/thought" element={<Patwar />} />
         <Route path="/thought/patwar" element={<Patwar />} />
-
         <Route path="/thought/lantern" element={<Lantern />} />
         <Route path="/thought/idioms" element={<Idioms />} />
+
         <Route path="/allissue" element={<AllIssue />} />
+        <Route path="/Specialissu" element={<SpecialIssue />} />
+        {/* archive */}
+        <Route path="/archive" element={<AuthorsHome />} />
+        <Route path="/archive/authors-home" element={<AuthorsHome />} />
+        <Route path="/archive/authors-memories" element={<AuthorsMemories />} />
+        <Route path="/archive/past" element={<Past />} />
+        <Route path="/archive/museum-memories" element={<MuseumMemories />} />
+        {/* rulesbook */}
+        <Route path="/rulesbook" element={<Membership />} />
+        <Route path="/rulesbook/membership" element={<Membership />} />
+        <Route path="/rulesbook/publication" element={<Publication />} />
+        <Route path="/rulesbook/confirmation" element={<Confirmation />} />
+        <Route path="/rulesbook/preview" element={<RulesBookPreview />} />
 
         {/* Policies */}
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />

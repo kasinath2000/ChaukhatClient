@@ -105,7 +105,7 @@ const WelcomeBanner = () => {
           </Box>
 
           {/* RIGHT */}
-          <Box
+          {/* <Box
             sx={{
               textAlign: {
                 xs: "center",
@@ -132,7 +132,48 @@ const WelcomeBanner = () => {
             >
               साहित्य • समाज • संस्कृति
             </Typography>
-          </Box>
+          </Box> */}
+          {/* RIGHT */}
+<Box
+  sx={{
+    textAlign: {
+      xs: "center",
+      md: "right",
+    },
+  }}
+>
+  <Typography
+    sx={{
+      color: "primary.main",
+      fontSize: "0.76rem",
+      fontWeight: 700,
+    }}
+  >
+    प्रकाशन : चौखट
+  </Typography>
+
+  <Typography
+    sx={{
+      mt: 0.3,
+      color: "text.secondary",
+      fontSize: "0.68rem",
+    }}
+  >
+    साहित्य • समाज • संस्कृति
+  </Typography>
+
+  <Typography
+    sx={{
+      mt: 0.7,
+      color: "secondary.dark",
+      fontSize: "0.72rem",
+      fontWeight: 800,
+      letterSpacing: "0.03em",
+    }}
+  >
+    ISSN: 3108-0073
+  </Typography>
+</Box>
         </Box>
       </Container>
     </Box>

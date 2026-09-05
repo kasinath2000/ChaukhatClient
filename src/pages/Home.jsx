@@ -564,7 +564,234 @@
 
 // // export default Home;
 
+// import React from "react";
+// import { Box, Container } from "@mui/material";
+
+// import WelcomeBanner from "../components/Home/WelcomeBanner";
+// import LeftEditorsSection from "../components/Home/LeftEditorsSection";
+// import HeroSlider from "../components/HeroSlider/HeroSlider";
+// import PatrikaSection from "../components/PatrikaSection/PatrikaSection";
+// import NoticeScroller from "../components/Notice/NoticeScroller";
+// import SocialLinks from "../components/SocialLinks/SocialLinks";
+// import ChaukhatFamily from "../components/Home/ChaukhatFamily";
+// const editors = [
+//   {
+//     id: 1,
+//     type: "chief",
+//     name: "नीरज चिलवार",
+//     role: "प्रधान संपादक",
+//     image: "https://i.pravatar.cc/500?img=12",
+//   },
+//   {
+//     id: 2,
+//     type: "editor",
+//     name: "डॉ. विजय सिंह",
+//     role: "सहायक संपादक",
+//     image: "https://i.pravatar.cc/500?img=47",
+//   },
+// ];
+
+// const slides = [
+//   {
+//     id: 1,
+//     image: "https://picsum.photos/seed/chaukhat1/1400/650",
+//     title: "साहित्य की नई चौखट",
+//     description:
+//       "शब्दों, विचारों और संस्कृति की दुनिया से जुड़ने का एक नया माध्यम।",
+//   },
+//   {
+//     id: 2,
+//     image: "https://picsum.photos/seed/chaukhat2/1400/650",
+//     title: "साहित्य, समाज और संस्कृति",
+//     description: "हिंदी साहित्य और सामाजिक सरोकारों को एक साथ लाने का प्रयास।",
+//   },
+//   {
+//     id: 3,
+//     image: "https://picsum.photos/seed/chaukhat3/1400/650",
+//     title: "विचारों का अपना मंच",
+//     description: "रचनात्मक विचारों और विविध दृष्टिकोणों के लिए एक खुला मंच।",
+//   },
+// ];
+
+// const patrikas = [
+//   {
+//     id: 1,
+//     title: "चौखट — सितंबर 2026",
+//     image: "https://picsum.photos/seed/patrika01/400/560",
+//     date: "सितंबर 2026",
+//   },
+//   {
+//     id: 2,
+//     title: "चौखट — अगस्त 2026",
+//     image: "https://picsum.photos/seed/patrika02/400/560",
+//     date: "अगस्त 2026",
+//   },
+//   {
+//     id: 3,
+//     title: "चौखट — जुलाई 2026",
+//     image: "https://picsum.photos/seed/patrika03/400/560",
+//     date: "जुलाई 2026",
+//   },
+//   {
+//     id: 4,
+//     title: "चौखट — जून 2026",
+//     image: "https://picsum.photos/seed/patrika04/400/560",
+//     date: "जून 2026",
+//   },
+//   {
+//     id: 5,
+//     title: "चौखट — मई 2026",
+//     image: "https://picsum.photos/seed/patrika05/400/560",
+//     date: "मई 2026",
+//   },
+//   {
+//     id: 6,
+//     title: "चौखट — अप्रैल 2026",
+//     image: "https://picsum.photos/seed/patrika06/400/560",
+//     date: "अप्रैल 2026",
+//   },
+//   {
+//     id: 7,
+//     title: "चौखट — मार्च 2026",
+//     image: "https://picsum.photos/seed/patrika07/400/560",
+//     date: "मार्च 2026",
+//   },
+//   {
+//     id: 8,
+//     title: "चौखट — फरवरी 2026",
+//     image: "https://picsum.photos/seed/patrika08/400/560",
+//     date: "फरवरी 2026",
+//   },
+//   {
+//     id: 9,
+//     title: "चौखट — जनवरी 2026",
+//     image: "https://picsum.photos/seed/patrika09/400/560",
+//     date: "जनवरी 2026",
+//   },
+//   {
+//     id: 10,
+//     title: "चौखट — दिसंबर 2025",
+//     image: "https://picsum.photos/seed/patrika10/400/560",
+//     date: "दिसंबर 2025",
+//   },
+//   {
+//     id: 11,
+//     title: "चौखट — नवंबर 2025",
+//     image: "https://picsum.photos/seed/patrika11/400/560",
+//     date: "नवंबर 2025",
+//   },
+//   {
+//     id: 12,
+//     title: "चौखट — अक्टूबर 2025",
+//     image: "https://picsum.photos/seed/patrika12/400/560",
+//     date: "अक्टूबर 2025",
+//   },
+// ];
+
+// const notices = [
+//   {
+//     id: 1,
+//     title: "चौखट पत्रिका का नया अंक प्रकाशित हो गया है।",
+//     link: "https://example.com/issue",
+//   },
+//   {
+//     id: 2,
+//     title: "साहित्यिक कार्यक्रम के लिए पंजीकरण प्रारंभ।",
+//     link: "",
+//   },
+//   {
+//     id: 3,
+//     title: "नई पुस्तक समीक्षा वेबसाइट पर उपलब्ध है।",
+//     link: "/libery/book-reviews",
+//   },
+// ];
+
+// const Home = () => {
+//   return (
+//     <Box
+//       component="main"
+//       sx={{
+//         width: "100%",
+//         minHeight: "100vh",
+//         backgroundColor: "background.default",
+//       }}
+//     >
+//       <WelcomeBanner />
+
+//       <Container
+//         maxWidth="xl"
+//         sx={{
+//           py: { xs: 2, md: 3 },
+//         }}
+//       >
+//         <Box
+//           sx={{
+//             display: "grid",
+//             gridTemplateColumns: {
+//               xs: "1fr",
+//               lg: "250px minmax(0, 1fr) 280px",
+//             },
+//             gap: { xs: 2.5, md: 3 },
+//             alignItems: "start",
+//           }}
+//         >
+//           {/* LEFT */}
+//           <Box
+//             sx={{
+//               order: {
+//                 xs: 2,
+//                 lg: 1,
+//               },
+//               display: "flex",
+//               flexDirection: "column",
+//               gap: 2,
+//             }}
+//           >
+//             <LeftEditorsSection editors={editors} />
+//           </Box>
+
+//           {/* CENTER */}
+//           <Box
+//             sx={{
+//               minWidth: 0,
+//               order: {
+//                 xs: 1,
+//                 lg: 2,
+//               },
+//             }}
+//           >
+//             <HeroSlider slides={slides} />
+
+//             <PatrikaSection patrikaItems={patrikas} />
+//           </Box>
+
+//           {/* RIGHT */}
+//           <Box
+//             sx={{
+//               order: {
+//                 xs: 3,
+//                 lg: 3,
+//               },
+//               display: "flex",
+//               flexDirection: "column",
+//               gap: 2,
+//             }}
+//           >
+//             <SocialLinks />
+
+//             <NoticeScroller notices={notices} />
+//           </Box>
+//         </Box>
+//       </Container>
+//     </Box>
+//   );
+// };
+
+// export default Home;
+
+
 import React from "react";
+
 import { Box, Container } from "@mui/material";
 
 import WelcomeBanner from "../components/Home/WelcomeBanner";
@@ -573,6 +800,7 @@ import HeroSlider from "../components/HeroSlider/HeroSlider";
 import PatrikaSection from "../components/PatrikaSection/PatrikaSection";
 import NoticeScroller from "../components/Notice/NoticeScroller";
 import SocialLinks from "../components/SocialLinks/SocialLinks";
+import ChaukhatFamily from "../components/Home/ChaukhatFamily";
 
 const editors = [
   {
@@ -603,13 +831,15 @@ const slides = [
     id: 2,
     image: "https://picsum.photos/seed/chaukhat2/1400/650",
     title: "साहित्य, समाज और संस्कृति",
-    description: "हिंदी साहित्य और सामाजिक सरोकारों को एक साथ लाने का प्रयास।",
+    description:
+      "हिंदी साहित्य और सामाजिक सरोकारों को एक साथ लाने का प्रयास।",
   },
   {
     id: 3,
     image: "https://picsum.photos/seed/chaukhat3/1400/650",
     title: "विचारों का अपना मंच",
-    description: "रचनात्मक विचारों और विविध दृष्टिकोणों के लिए एक खुला मंच।",
+    description:
+      "रचनात्मक विचारों और विविध दृष्टिकोणों के लिए एक खुला मंच।",
   },
 ];
 
@@ -716,6 +946,7 @@ const Home = () => {
         backgroundColor: "background.default",
       }}
     >
+      {/* Welcome / Publication Banner */}
       <WelcomeBanner />
 
       <Container
@@ -735,19 +966,24 @@ const Home = () => {
             alignItems: "start",
           }}
         >
-          {/* LEFT */}
+          {/* =========================================
+              LEFT SIDEBAR
+          ========================================= */}
           <Box
             sx={{
               order: {
                 xs: 2,
                 lg: 1,
               },
+              minWidth: 0,
             }}
           >
             <LeftEditorsSection editors={editors} />
           </Box>
 
-          {/* CENTER */}
+          {/* =========================================
+              CENTER CONTENT
+          ========================================= */}
           <Box
             sx={{
               minWidth: 0,
@@ -755,6 +991,9 @@ const Home = () => {
                 xs: 1,
                 lg: 2,
               },
+              display: "flex",
+              flexDirection: "column",
+              gap: { xs: 2.5, md: 3 },
             }}
           >
             <HeroSlider slides={slides} />
@@ -762,20 +1001,28 @@ const Home = () => {
             <PatrikaSection patrikaItems={patrikas} />
           </Box>
 
-          {/* RIGHT */}
+          {/* =========================================
+              RIGHT SIDEBAR
+          ========================================= */}
           <Box
             sx={{
               order: {
                 xs: 3,
                 lg: 3,
               },
+              minWidth: 0,
               display: "flex",
               flexDirection: "column",
               gap: 2,
             }}
           >
+            {/* Social Media */}
             <SocialLinks />
 
+            {/* Chaukhat Family */}
+            <ChaukhatFamily />
+
+            {/* Main Notices */}
             <NoticeScroller notices={notices} />
           </Box>
         </Box>

@@ -1,233 +1,34 @@
-// import React, { useMemo } from "react";
-
-// import { Box, Container, Typography } from "@mui/material";
-
-// import { Link } from "react-router-dom";
-
-// import { AppChip, AppCard } from "../../components/common/index";
-
-// import { newsCategories } from "../../data/newsData";
-
-// const NewsCategory = ({ title, description, category, items = [] }) => {
-//   const categoryItems = useMemo(
-//     () => items.filter((item) => item.category === category),
-//     [items, category],
-//   );
-
-//   return (
-//     <Box
-//       sx={{
-//         py: {
-//           xs: 4,
-//           md: 6,
-//         },
-//       }}
-//     >
-//       <Container maxWidth="xl">
-//         {/* Page Header */}
-//         <Box
-//           sx={{
-//             textAlign: "center",
-//             mb: {
-//               xs: 4,
-//               md: 5,
-//             },
-//           }}
-//         >
-//           <Typography
-//             variant="h3"
-//             sx={{
-//               color: "primary.main",
-//               fontWeight: 800,
-//               fontSize: {
-//                 xs: "2rem",
-//                 md: "3rem",
-//               },
-//               mb: 1,
-//             }}
-//           >
-//             {title}
-//           </Typography>
-
-//           <Box
-//             sx={{
-//               width: 60,
-//               height: 4,
-//               backgroundColor: "secondary.main",
-//               borderRadius: 10,
-//               mx: "auto",
-//               mb: 2,
-//             }}
-//           />
-
-//           <Typography
-//             sx={{
-//               maxWidth: 700,
-//               mx: "auto",
-//               color: "text.secondary",
-//               lineHeight: 1.8,
-//             }}
-//           >
-//             {description}
-//           </Typography>
-//         </Box>
-
-//         {/* News Category Navigation */}
-//         <Box
-//           sx={{
-//             display: "flex",
-//             gap: 1,
-//             overflowX: "auto",
-//             pb: 1.5,
-//             mb: 4,
-
-//             scrollbarWidth: "thin",
-
-//             "&::-webkit-scrollbar": {
-//               height: 5,
-//             },
-
-//             "&::-webkit-scrollbar-track": {
-//               backgroundColor: "transparent",
-//             },
-
-//             "&::-webkit-scrollbar-thumb": {
-//               backgroundColor: "#D6B98A",
-//               borderRadius: 10,
-//             },
-//           }}
-//         >
-//           {newsCategories.map((item) => {
-//             const active = item.value === category;
-
-//             return (
-//               <AppChip
-//                 key={item.value}
-//                 label={item.label}
-//                 active={active}
-//                 clickable
-//                 component={Link}
-//                 to={item.href}
-//                 sx={{
-//                   flexShrink: 0,
-//                 }}
-//               />
-//             );
-//           })}
-//         </Box>
-
-//         {/* All News Header */}
-//         <Box sx={{ mb: 3 }}>
-//           <Typography
-//             variant="h5"
-//             sx={{
-//               color: "primary.main",
-//               fontWeight: 800,
-//             }}
-//           >
-//             {title} की सभी खबरें
-//           </Typography>
-//         </Box>
-
-//         {/* News Grid */}
-//         {categoryItems.length > 0 ? (
-//           <Box
-//             sx={{
-//               display: "grid",
-//               gridTemplateColumns: {
-//                 xs: "1fr",
-//                 sm: "repeat(2, 1fr)",
-//                 lg: "repeat(3, 1fr)",
-//               },
-//               gap: 3,
-//             }}
-//           >
-//             {categoryItems.map((item) => (
-//               <AppCard
-//                 key={item.id}
-//                 padding={0}
-//                 sx={{
-//                   overflow: "hidden",
-//                 }}
-//               >
-//                 {/* Image */}
-//                 <Box
-//                   component="img"
-//                   src={item.imageUrl}
-//                   alt={item.title}
-//                   sx={{
-//                     width: "100%",
-//                     height: {
-//                       xs: 210,
-//                       md: 230,
-//                     },
-//                     objectFit: "cover",
-//                     display: "block",
-//                   }}
-//                 />
-
-//                 {/* Content */}
-//                 <Box sx={{ p: 2.5 }}>
-//                   <Typography
-//                     sx={{
-//                       color: "primary.main",
-//                       fontWeight: 700,
-//                       fontSize: "1.05rem",
-//                       mb: 1,
-//                     }}
-//                   >
-//                     {item.title}
-//                   </Typography>
-
-//                   <Typography
-//                     variant="body2"
-//                     sx={{
-//                       color: "text.secondary",
-//                       lineHeight: 1.7,
-//                     }}
-//                   >
-//                     {item.description}
-//                   </Typography>
-//                 </Box>
-//               </AppCard>
-//             ))}
-//           </Box>
-//         ) : (
-//           <AppCard hover={false}>
-//             <Typography
-//               sx={{
-//                 textAlign: "center",
-//                 color: "text.secondary",
-//                 py: 4,
-//               }}
-//             >
-//               इस श्रेणी में अभी कोई खबर उपलब्ध नहीं है।
-//             </Typography>
-//           </AppCard>
-//         )}
-//       </Container>
-//     </Box>
-//   );
-// };
-
-// export default NewsCategory;
-
 import React, { useMemo } from "react";
 
-import { Box, Container, Typography } from "@mui/material";
+import {
+  Box,
+  Container,
+  Typography,
+} from "@mui/material";
 
 import { Link } from "react-router-dom";
 
-import PlayArrowRoundedIcon from "@mui/icons-material/PlayArrowRounded";
+import HistoryEduRoundedIcon from "@mui/icons-material/HistoryEduRounded";
 
-import { AppCard, AppChip, AppSlider } from "../../components/common/index";
+import {
+  AppCard,
+  AppChip,
+  AppSlider,
+} from "../../components/common/index";
 
-import { newsCategories } from "../../data/newsData";
+import { archiveCategories } from "../../data/archiveData";
 
-const NewsCategory = ({ title, description, category, items = [] }) => {
-  // Category Items
+const ArchiveCategory = ({
+  title,
+  description,
+  category,
+  items = [],
+}) => {
   const categoryItems = useMemo(
-    () => items.filter((item) => item.category === category),
+    () =>
+      items.filter(
+        (item) => item.category === category
+      ),
     [items, category],
   );
 
@@ -241,6 +42,7 @@ const NewsCategory = ({ title, description, category, items = [] }) => {
       }}
     >
       <Container maxWidth="xl">
+
         {/* =========================
             PAGE HEADER
         ========================== */}
@@ -295,8 +97,6 @@ const NewsCategory = ({ title, description, category, items = [] }) => {
         {/* =========================
             CATEGORY NAVIGATION
         ========================== */}
-
-        {/* Centered wrapper */}
         <Box
           sx={{
             display: "flex",
@@ -311,13 +111,9 @@ const NewsCategory = ({ title, description, category, items = [] }) => {
               justifyContent: "center",
               alignItems: "center",
               gap: 1,
-
-              // Mobile पर जरूरत पड़ने पर horizontal scroll
               maxWidth: "100%",
               overflowX: "auto",
-
               pb: 1,
-
               scrollbarWidth: "thin",
 
               "&::-webkit-scrollbar": {
@@ -334,8 +130,9 @@ const NewsCategory = ({ title, description, category, items = [] }) => {
               },
             }}
           >
-            {newsCategories.map((item) => {
-              const active = item.value === category;
+            {archiveCategories.map((item) => {
+              const active =
+                item.value === category;
 
               return (
                 <AppChip
@@ -357,9 +154,12 @@ const NewsCategory = ({ title, description, category, items = [] }) => {
         {/* =========================
             FEATURED SLIDER
         ========================== */}
-
         {categoryItems.length > 0 && (
-          <Box sx={{ mb: 5 }}>
+          <Box
+            sx={{
+              mb: 5,
+            }}
+          >
             <AppSlider
               items={categoryItems}
               getSlideLink={(item) => item.link}
@@ -374,7 +174,6 @@ const NewsCategory = ({ title, description, category, items = [] }) => {
                   {/* Image */}
                   <Box
                     component="img"
-                    target="_blank"
                     src={item.imageUrl}
                     alt={item.title}
                     sx={{
@@ -391,13 +190,10 @@ const NewsCategory = ({ title, description, category, items = [] }) => {
                     sx={{
                       position: "absolute",
                       inset: 0,
-
                       background:
                         "linear-gradient(90deg, rgba(59,6,10,0.94) 0%, rgba(59,6,10,0.55) 48%, rgba(59,6,10,0.08) 100%)",
-
                       display: "flex",
                       alignItems: "center",
-
                       pointerEvents: "none",
                     }}
                   >
@@ -408,40 +204,36 @@ const NewsCategory = ({ title, description, category, items = [] }) => {
                           sm: 4,
                           md: 6,
                         },
-
                         maxWidth: {
                           xs: "100%",
                           md: "65%",
                         },
                       }}
                     >
-                      {/* News Label */}
+                      {/* Archive Label */}
                       <Box
                         sx={{
                           display: "inline-flex",
                           alignItems: "center",
                           gap: 0.7,
-
                           px: 1.3,
                           py: 0.6,
-
                           borderRadius: 10,
-
-                          backgroundColor: "secondary.main",
+                          backgroundColor:
+                            "secondary.main",
                           color: "primary.main",
-
                           mb: 2,
-
                           fontSize: "0.8rem",
                           fontWeight: 700,
                         }}
                       >
-                        <PlayArrowRoundedIcon
+                        <HistoryEduRoundedIcon
                           sx={{
                             fontSize: 17,
                           }}
                         />
-                        खबर
+
+                        अभिलेख
                       </Box>
 
                       {/* Title */}
@@ -450,15 +242,12 @@ const NewsCategory = ({ title, description, category, items = [] }) => {
                         sx={{
                           color: "#FFFFFF",
                           fontWeight: 800,
-
                           fontSize: {
                             xs: "1.7rem",
                             sm: "2rem",
                             md: "2.5rem",
                           },
-
                           lineHeight: 1.25,
-
                           mb: 1.5,
                         }}
                       >
@@ -468,22 +257,20 @@ const NewsCategory = ({ title, description, category, items = [] }) => {
                       {/* Description */}
                       <Typography
                         sx={{
-                          color: "rgba(255,255,255,0.82)",
+                          color:
+                            "rgba(255,255,255,0.82)",
                           lineHeight: 1.8,
-
                           maxWidth: 600,
-
                           display: {
                             xs: "-webkit-box",
                             md: "block",
                           },
-
                           WebkitLineClamp: {
                             xs: 3,
                             md: "unset",
                           },
-
-                          WebkitBoxOrient: "vertical",
+                          WebkitBoxOrient:
+                            "vertical",
                           overflow: "hidden",
                         }}
                       >
@@ -498,9 +285,8 @@ const NewsCategory = ({ title, description, category, items = [] }) => {
         )}
 
         {/* =========================
-            ALL NEWS HEADER
+            ALL ARCHIVE HEADER
         ========================== */}
-
         <Box
           sx={{
             mb: 3,
@@ -513,25 +299,22 @@ const NewsCategory = ({ title, description, category, items = [] }) => {
               fontWeight: 800,
             }}
           >
-            {title} की सभी खबरें
+            {title} की सभी प्रस्तुतियाँ
           </Typography>
         </Box>
 
         {/* =========================
             CONTENT GRID
         ========================== */}
-
         {categoryItems.length > 0 ? (
           <Box
             sx={{
               display: "grid",
-
               gridTemplateColumns: {
                 xs: "1fr",
                 sm: "repeat(2, 1fr)",
                 lg: "repeat(3, 1fr)",
               },
-
               gap: 3,
             }}
           >
@@ -550,16 +333,14 @@ const NewsCategory = ({ title, description, category, items = [] }) => {
                   alt={item.title}
                   sx={{
                     width: "100%",
-
                     height: {
                       xs: 210,
                       md: 230,
                     },
-
                     objectFit: "cover",
                     display: "block",
-
-                    borderRadius: "12px 12px 0 0",
+                    borderRadius:
+                      "12px 12px 0 0",
                   }}
                 />
 
@@ -594,10 +375,6 @@ const NewsCategory = ({ title, description, category, items = [] }) => {
             ))}
           </Box>
         ) : (
-          /* =========================
-             EMPTY STATE
-          ========================== */
-
           <AppCard hover={false}>
             <Typography
               sx={{
@@ -606,7 +383,7 @@ const NewsCategory = ({ title, description, category, items = [] }) => {
                 py: 4,
               }}
             >
-              इस श्रेणी में अभी कोई खबर उपलब्ध नहीं है।
+              इस श्रेणी में अभी कोई सामग्री उपलब्ध नहीं है।
             </Typography>
           </AppCard>
         )}
@@ -615,4 +392,4 @@ const NewsCategory = ({ title, description, category, items = [] }) => {
   );
 };
 
-export default NewsCategory;
+export default ArchiveCategory;

@@ -1,0 +1,218 @@
+export const founders = [
+  {
+    id: 1,
+    name: "नीरज छिलवार",
+    position: "संस्थापक",
+    title: "प्रधान संपादक एवं संस्थापक : चौखट पत्रिका",
+    desc: "सृजनात्मक रचनाकार, रंगकर्मी तथा फिल्म निर्माता-निर्देशक। साहित्य और संस्कृति के क्षेत्र में सक्रिय योगदान।",
+    location: "नई दिल्ली",
+    email: "founder1@example.com",
+    phone: "9876543210",
+    image: "https://i.pravatar.cc/700?img=12",
+  },
+  {
+    id: 2,
+    name: "डॉ. तरुण कुमार",
+    position: "संस्थापक",
+    title: "संस्थापक - चौखट पत्रिका",
+    desc: "शिक्षा, साहित्य और सामाजिक सरोकारों से जुड़े रचनात्मक व्यक्तित्व।",
+    location: "नई दिल्ली",
+    email: "founder2@example.com",
+    phone: "9876543211",
+    image: "https://i.pravatar.cc/700?img=47",
+  },
+];
+
+export const patrons = [
+  {
+    id: 1,
+    name: "डॉ. अरुण कुमार",
+    position: "संरक्षक",
+    desc: "साहित्य एवं सामाजिक सरोकारों के क्षेत्र में दीर्घकालीन योगदान।",
+    location: "नई दिल्ली",
+    email: "patron1@example.com",
+    image: "https://i.pravatar.cc/700?img=11",
+  },
+  {
+    id: 2,
+    name: "श्री विवेक प्रसाद",
+    position: "संरक्षक",
+    desc: "साहित्यिक एवं सांस्कृतिक गतिविधियों के सहयोगी।",
+    location: "पटना",
+    email: "patron2@example.com",
+    image: "https://i.pravatar.cc/700?img=13",
+  },
+  {
+    id: 3,
+    name: "डॉ. संजय सिंह",
+    position: "संरक्षक",
+    desc: "भारतीय साहित्य और संस्कृति के अध्येता एवं सहयोगी।",
+    location: "लखनऊ",
+    email: "patron3@example.com",
+    image: "https://i.pravatar.cc/700?img=15",
+  },
+];
+
+export const advisoryBoard = [
+  {
+    id: 1,
+    name: "प्रो. अनिल वर्मा",
+    position: "परामर्श मंडल सदस्य",
+    desc: "साहित्य, शिक्षा और संस्कृति के क्षेत्र में विशेषज्ञ।",
+    location: "दिल्ली",
+    email: "anil@example.com",
+    image: "https://i.pravatar.cc/700?img=3",
+  },
+  {
+    id: 2,
+    name: "डॉ. सीमा त्रिपाठी",
+    position: "परामर्श मंडल सदस्य",
+    desc: "हिंदी साहित्य एवं भारतीय संस्कृति की अध्येता।",
+    location: "वाराणसी",
+    email: "seema@example.com",
+    image: "https://i.pravatar.cc/700?img=5",
+  },
+  {
+    id: 3,
+    name: "प्रो. राजेश मिश्रा",
+    position: "परामर्श मंडल सदस्य",
+    desc: "शिक्षा एवं साहित्यिक विमर्श से जुड़े वरिष्ठ विद्वान।",
+    location: "भोपाल",
+    email: "rajesh@example.com",
+    image: "https://i.pravatar.cc/700?img=8",
+  },
+];
+
+export const editorialBoard = [
+  {
+    id: 1,
+    name: "डॉ. विजय सिंह",
+    position: "संपादक",
+    desc: "संपादकीय योजना एवं साहित्यिक सामग्री के चयन से जुड़े।",
+    email: "vijay@example.com",
+    image: "https://i.pravatar.cc/700?img=14",
+  },
+  {
+    id: 2,
+    name: "कविता शर्मा",
+    position: "सहायक संपादक",
+    desc: "कविता, कथा और रचनात्मक साहित्य के संपादन में सक्रिय।",
+    email: "kavita@example.com",
+    image: "https://i.pravatar.cc/700?img=23",
+  },
+  {
+    id: 3,
+    name: "राहुल श्रीवास्तव",
+    position: "संपादकीय सहयोगी",
+    desc: "समकालीन साहित्य और डिजिटल सामग्री के संपादन से जुड़े।",
+    email: "rahul@example.com",
+    image: "https://i.pravatar.cc/700?img=33",
+  },
+  {
+    id: 4,
+    name: "नेहा सक्सेना",
+    position: "संपादकीय सहयोगी",
+    desc: "सांस्कृतिक एवं सामाजिक विषयों की सामग्री पर कार्य।",
+    email: "neha@example.com",
+    image: "https://i.pravatar.cc/700?img=44",
+  },
+];
+
+export const expertCommittee = [
+  {
+    id: 1,
+    name: "प्रो. राजीव मेहता",
+    position: "विशेषज्ञ समिति सदस्य",
+    desc: "साहित्य एवं भाषा अध्ययन के विशेषज्ञ।",
+    location: "जयपुर",
+    email: "rajiv@example.com",
+    image: "https://i.pravatar.cc/700?img=52",
+  },
+  {
+    id: 2,
+    name: "डॉ. मीना जोशी",
+    position: "विशेषज्ञ समिति सदस्य",
+    desc: "भारतीय कला एवं संस्कृति पर शोध कार्य।",
+    location: "पुणे",
+    email: "meena@example.com",
+    image: "https://i.pravatar.cc/700?img=45",
+  },
+  {
+    id: 3,
+    name: "डॉ. आलोक गुप्ता",
+    position: "विशेषज्ञ समिति सदस्य",
+    desc: "मीडिया, सिनेमा एवं सांस्कृतिक अध्ययन के विशेषज्ञ।",
+    location: "मुंबई",
+    email: "alok@example.com",
+    image: "https://i.pravatar.cc/700?img=60",
+  },
+];
+
+export const activeMembers = [
+  {
+    id: 1,
+    name: "अमित कुमार",
+    position: "सक्रिय सहयोगी सदस्य",
+    desc: "डिजिटल सामग्री एवं साहित्यिक गतिविधियों में सहयोग।",
+    location: "दिल्ली",
+    email: "amit@example.com",
+    image: "https://i.pravatar.cc/700?img=68",
+  },
+  {
+    id: 2,
+    name: "रश्मि वर्मा",
+    position: "सक्रिय सहयोगी सदस्य",
+    desc: "सांस्कृतिक कार्यक्रमों एवं रचनात्मक गतिविधियों में सहयोग।",
+    location: "लखनऊ",
+    email: "rashmi@example.com",
+    image: "https://i.pravatar.cc/700?img=32",
+  },
+  {
+    id: 3,
+    name: "मोहित शर्मा",
+    position: "सक्रिय सहयोगी सदस्य",
+    desc: "सोशल मीडिया एवं डिजिटल संचार में सहयोग।",
+    location: "जयपुर",
+    email: "mohit@example.com",
+    image: "https://i.pravatar.cc/700?img=70",
+  },
+  {
+    id: 4,
+    name: "पूजा सिंह",
+    position: "सक्रिय सहयोगी सदस्य",
+    desc: "साहित्यिक आयोजनों और सामग्री प्रबंधन में सहयोग।",
+    location: "पटना",
+    email: "pooja@example.com",
+    image: "https://i.pravatar.cc/700?img=48",
+  },
+];
+
+export const technicalTeam = [
+  {
+    id: 1,
+    name: "अभिषेक कुमार",
+    position: "तकनीकी प्रमुख",
+    desc: "वेबसाइट एवं डिजिटल प्लेटफॉर्म के तकनीकी संचालन की जिम्मेदारी।",
+    location: "दिल्ली",
+    email: "abhishek@example.com",
+    image: "https://i.pravatar.cc/700?img=56",
+  },
+  {
+    id: 2,
+    name: "रोहित वर्मा",
+    position: "वेब डेवलपर",
+    desc: "वेब एप्लिकेशन एवं डिजिटल फीचर्स के विकास में सक्रिय।",
+    location: "नोएडा",
+    email: "rohit@example.com",
+    image: "https://i.pravatar.cc/700?img=57",
+  },
+  {
+    id: 3,
+    name: "साक्षी गुप्ता",
+    position: "डिजिटल डिजाइनर",
+    desc: "डिजिटल डिजाइन एवं वेबसाइट के दृश्य अनुभव पर कार्य।",
+    location: "गुरुग्राम",
+    email: "sakshi@example.com",
+    image: "https://i.pravatar.cc/700?img=49",
+  },
+];
